@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project sakhi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #message, #hearts, #paragraph {
+      display: none;
+      margin-top: 20px;
+    }
+    #message {
+      cursor: pointer;
+      font-size: 50px;
+      color: rgb(0, 2, 139);
+      font-weight: bold;
+    }
+    #hearts img {
+      width: 500px;
+      height: auto;
+      cursor: pointer;
+    }
+    #paragraph {
+      font-size: 24px;
+      color: rgb(88, 13, 13);
+    }
+  </style>
+</head>
+<body>
+  <a href="#" id="link">Click me there is a surprise for you!</a>
+
+  <div id="message">hey beautiful you are my everything </div>
+  <div id="hearts">
+    <img src="https://images.pexels.com/photos/2072185/pexels-photo-2072185.jpeg" alt="Hearts">
+  </div>
+  <div id="paragraph">
+    <p class="paragraph-spacing">
+Meri bikhri hui si duniya ko sametogi kya <br>
+Meri berang si zindagi me rang bharogi kya<br>
+
+Haa meri khwaish h tume apna banane ki <br>
+Iss zamane se tumhe churane dogi kya<br>
+
+Dooriyan humare bhich ki Kam hongi kya<br>
+Jazbaat iss dil ke poore honge kya<br>
+
+Meri zindagi me jeevansaathi ki bhoomika nibhaogi kya <br>
+Iss anjaan si duniya me meri jaan banogi kya<br>
+
+Mere haath me tumhara haath dogi kya <br>
+Zindagi bhar saath nibhane ka wada karogi kya <br>
+
+Ye chaand sitare ye phool sab  filmi baate h <br>
+Tum ye batao mere baccho ki mummy banogi kya ❤️</p>
+  </div>
+
+  <script>
+    const link = document.getElementById("link");
+    const message = document.getElementById("message");
+    const hearts = document.getElementById("hearts");
+    const paragraph = document.getElementById("paragraph");
+
+    // Step 1: Show message when link is clicked
+    link.addEventListener("click", function(event) {
+      event.preventDefault(); // prevent page reload
+      message.style.display = "block";
+    });
+
+    // Step 2: Show hearts when message is clicked
+    message.addEventListener("click", function() {
+      hearts.style.display = "block";
+    });
+
+    // Step 3: Show paragraph when hearts image is clicked
+    hearts.addEventListener("click", function() {
+      paragraph.style.display = "block";
+    });
+  </script>
+</body>
+</html>
